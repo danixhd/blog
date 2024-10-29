@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    h4 {
+      color: #FFFFFF;
+  }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:20px 100px;
+    background-color: seagreen;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    z-index: 100;
+    color:white;
+}
+
+.logo{
+    font-size: 10px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 700;
+}
+.navbar a {
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.navbar a::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #FFF;
+  transition: .3s;
+}
+
+.navbar a:hover::before{
+  width: 100%;
+}
+
+.intro{
+
+  padding-top: 25px;
+}
+
+.intro, .articulos, .tips, .footer {
+    padding: 20px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.articulo {
+    margin: 10px 0;
+    background-image: url('https://justenergy.com/wp-content/uploads/2019/01/Plastic-Pollution-1.jpg');
+    color:white;
+    font-weight:bold;
+}
+
+.articulo h3 {
+    margin-bottom: 5px;
+    color: #4caf50;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+}
+@import url();
+
+:root {
+  --dark-blue: #1F4782;
+  --dark-gray: #303335;
+  --golden: #AB834C;
+  --golden-tainoi: #E9BE71;
+  --gray: #818C96;
+  --white: #FFF;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.general-container {
+  display: flex;
+  height: 30rem;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 70rem;
+}
+
+.radio {
+  display: none;
+}
+
+.content {
+  background: var(--white)
+  url('https://m.media-amazon.com/images/I/61dzdQAw4LL._AC_UF1000,1000_QL80_.jpg')
+  100% / cover no-repeat;
+  border-radius: 3rem;
+  cursor: pointer;
+  flex: 1;
+  margin-right: 0.8rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+.content:hover {
+  box-shadow: 0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 50%;
+  bottom: 1rem;
+  color: var(--golden-tainoi);
+  display: flex;
+  font-size: 1.5rem;
+  height: 2.5rem;
+  justify-content: center;
+  left: 1.1rem;
+  position: absolute;
+  width: 2.5rem;
+}
+
+.content:nth-of-type(2) {
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5fd8446484774a17d4cc09e3/1663586342794-SQ8EE209HZU669U6B75H/DA8200DA-A6B5-4612-AB6D-728E5DD09636?format=1000w');
+}
+
+.content:nth-of-type(3) {
+  background-image: url('https://www.aiteall.ca/cdn/shop/products/zero-waste-washing-up-bundle.jpg?v=1667945094');
+}
+
+.content:nth-of-type(4) {
+  background-image: url('https://evereco.com.au/cdn/shop/products/1L.jpg?v=1576021999');
+}
+
+.content:nth-of-type(5) {
+  background-image: url('https://www.bambaw.com/cdn/shop/products/Bambaw-Toothbrush-2-Lifestyle-Medium-03.jpg?v=1630509121');
+  margin-right: 0;
+}
+
+.content:nth-of-type(2) .icon {
+  color: var(--dark-gray);
+}
+
+.content:nth-of-type(3) .icon {
+  color: var(--dark-blue);
+}
+
+.content:nth-of-type(4) .icon {
+  color: var(--gray);
+}
+
+.content:nth-of-type(5) .icon {
+  color: var(--golden);
+}
+
+.card-title {
+  bottom: 1.2rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  left: 4.5rem;
+  line-height: 1.1;
+  opacity: 0;
+  position: absolute;
+  text-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  transform: translateX(2rem);
+  transition: 290ms cubic-bezier(0.05, 0.61, 0.41, 0.95) 300ms;
+  transition-property: opacity, transform;
+  user-select: none;
+  white-space: nowrap;
+
+}
+
+.subtitle {
+  font-size: 0.9rem;
+}
+
+/* Effect */
+.radio:checked + .content {
+  border-radius: 2rem;
+  box-shadow: 0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.3);
+  flex: 10;
+}
+
+.radio:checked + .content > .card-title {
+  opacity: 1;
+  transform: translateX(0);
+}
+.txt{
+  padding: 45px;
+  font-family: 'Roboto', sans-serif;
+  gap: 5px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  box-shadow: 0 3px 7px -1px rgba(#000, .1);
+  margin-bottom: 1.6%;
+  background: white;
+  line-height: 1.4;
+  font-family: sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+  a {
+    color: inherit;
+    &:hover {
+      color: #5ad67d;
+    }
+  }
+  &:hover {
+    .photo {
+      transform: scale(1.3) rotate(3deg);
+    }
+  }
+  .meta {
+    position: relative;
+    z-index: 0;
+    height: 200px;
+  }
+  .photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform .2s;
+  }
+  .details,
+  .details ul {
+    margin: auto;
+    padding: 0;
+    list-style: none;
+  }
+
+  .details {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    margin: auto;
+    transition: left .2s;
+    background: rgba(#000, .6);
+    color:white;
+    padding: 10px;
+    width: 100%;
+    font-size: .9rem;
+    a {
+      text-decoration: dotted underline
+    }
+    ul li {
+      display: inline-block;
+    }
+    .author:before {
+      font-family: FontAwesome;
+      margin-right: 10px;
+      content: "\f007";
+    }
+
+    .date:before {
+      font-family: FontAwesome;
+      margin-right: 10px;
+      content: "\f133";
+    }
+
+    .tags {
+      ul:before {
+        font-family: FontAwesome;
+        content: "\f02b";
+        margin-right: 10px;
+      }
+      li {
+        margin-right: 2px;
+        &:first-child {
+          margin-left: -4px;
+        }
+      }
+    }
+  }
+  .description {
+    padding: 1rem;
+    background: white;
+    position: relative;
+    z-index: 1;
+    h1,
+    h2 {
+      font-family: Poppins, sans-serif;
+    }
+    h1 {
+      line-height: 1;
+      margin: 0;
+      font-size: 1.7rem;
+    }
+    h2 {
+      font-size: 1rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #a2a2a2;
+      margin-top: 5px;
+    }
+
+ 
+    .read-more {
+      text-align: right;
+      a {
+        color: #5ad67d;
+        display: inline-block;
+        position: relative;
+        &:after {
+          content: "\f061";
+          font-family: FontAwesome;
+          margin-left: -10px;
+          opacity: 0;
+          vertical-align: middle;
+          transition: margin .3s, opacity .3s;
+        }
+
+        &:hover:after {
+          margin-left: 5px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  p {
+    position: relative;
+    margin: 1rem 0 0;
+    &:first-of-type {
+      margin-top: 1.25rem;
+      &:before {
+        content: "";
+        position: absolute;
+        height: 5px;
+        background: #5ad67d;
+        width: 35px;
+        top: -0.75rem;
+        border-radius: 3px;
+      }
+    }
+  }
+  &:hover {
+    .details {
+      left: 0%;
+    }
+  }
+
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    max-width: 700px;
+    .meta {
+      flex-basis: 40%;
+      height: auto;
+    }
+    .description {
+      flex-basis: 60%;
+      &:before {
+        transform: skewX(-3deg);
+        content: "";
+        background: #fff;
+        width: 30px;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+    }
+    &.alt {
+      flex-direction: row-reverse;
+      .description {
+        &:before {
+          left: inherit;
+          right: -10px;
+          transform: skew(3deg)
+        }
+      }
+      .details {
+        padding-left: 25px;
+      }
+    }
+  }
+}
