@@ -13,7 +13,9 @@ body {
       color: #FFFFFF;
   }
 }
-
+.hh{
+  color:seagreen;
+}
 header {
     position: fixed;
     top: 0;
@@ -69,21 +71,33 @@ header {
     background-color: white;
     border-radius: 8px;
 }
-
+.art{
+    padding: 20px;
+    margin: 10px auto;
+    width: 200%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+}
 h1, h2, h3 {
     color: #333;
 }
+.diviv{
+  position:flex;
+  
 
+}
 .articulo {
-    margin: 10px 0;
-    background-image: url('https://justenergy.com/wp-content/uploads/2019/01/Plastic-Pollution-1.jpg');
-    color:white;
-    font-weight:bold;
+    margin: 30px 0;
+    background-image: url('https://th.bing.com/th/id/R.d685b0a231b05008ffa653111a94b051?rik=2H1P0VPhrTZ%2b8w&pid=ImgRaw&r=0');
+    color:black;
+    font-weight: bold;
+     
 }
 
 .articulo h3 {
     margin-bottom: 5px;
-    color: #4caf50;
+    color: white;
 }
 
 footer {
@@ -198,7 +212,7 @@ body {
 
 .card-title {
   bottom: 1.2rem;
-  color: var(--white);
+  color: white;
   display: flex;
   flex-direction: column;
   font-size: 1.2rem;
